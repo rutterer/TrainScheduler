@@ -180,6 +180,7 @@ var tMinutesTillTrain = tFrequency - tRemainder;
 
 // Next Train
 var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+var nextTrainFormatted = moment(nextTrain).format("HH:mm");
 
 
       // Create a new row
@@ -188,7 +189,7 @@ var nextTrain = moment().add(tMinutesTillTrain, "minutes");
     $("<td>").text(tName),
     $("<td>").text(tDestination),
     $("<td>").text(tFrequency),
-    $("<td>").text(nextTrain),
+    $("<td>").text(nextTrainFormatted),
     $("<td>").text(tMinutesTillTrain),
   );
     
